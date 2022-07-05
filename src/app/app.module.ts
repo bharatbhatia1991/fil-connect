@@ -6,19 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
-import { InsightsComponent } from './insights/insights.component';
+import { InsightsComponent } from './insights/insights.component';   
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     TicketDetailsComponent,
-    InsightsComponent
+    InsightsComponent  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AgGridModule
+    AgGridModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
