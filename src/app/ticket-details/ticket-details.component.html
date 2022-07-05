@@ -1,0 +1,67 @@
+<div class="card" *ngIf="selectedTicket">
+    <div class="card-header">
+      <span class="title">Ticket {{selectedTicket.ticket}}</span>
+      <div class="pull-right">
+        <button class="btn btn-primary">Close Ticket</button>
+        <button class="btn btn-danger">Escalate</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li class="list-group-item red">
+          <span>{{selectedTicket.subject}} ({{selectedTicket.client}})</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit nec velit ac sodales. Praesent
+          eleifend quam sed massa pellentesque, id molestie metus feugiat. Sed sit amet placerat ante.
+          Pellentesque aliquet ipsum quis odio pellentesque tempor. Proin sollicitudin, magna aliquet tempus
+          sagittis, risus magna lobortis urna, ac ullamcorper turpis tellus vitae nulla.
+        </li>
+        <li class="list-group-item list-group-item-primary green">
+          <span>{{selectedTicket.subject}} ({{selectedTicket.client}})</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Ut blandit nec velit ac sodales. Praesent eleifend quam sed massa pellentesque, id molestie metus
+          feugiat. Sed sit amet placerat ante. Pellentesque aliquet ipsum quis odio pellentesque tempor. Proin
+          sollicitudin, magna aliquet tempus sagittis, risus magna lobortis urna, ac ullamcorper turpis tellus
+          vitae nulla.
+        </li>
+        <li class="list-group-item list-group-item-secondary yellow">
+          <span>{{selectedTicket.subject}} ({{selectedTicket.client}})</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Ut blandit nec velit ac sodales. Praesent eleifend quam sed massa pellentesque, id molestie metus
+          feugiat. Sed sit amet placerat ante. Pellentesque aliquet ipsum quis odio pellentesque tempor. Proin
+          sollicitudin, magna aliquet tempus sagittis, risus magna lobortis urna, ac ullamcorper turpis tellus
+          vitae nulla.
+        </li>
+      </ul>
+  
+      <div class="reply-section">
+        <button type="button" data-toggle="modal" data-target="#replyToTicketModal" class="btn btn-elegant"><i
+            class="fa fa-reply pr-2" aria-hidden="true"></i>Reply</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="replyToTicketModal" tabindex="-1" role="dialog" aria-labelledby="replyToTicketModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" *ngIf="selectedTicket">
+          <h5 class="modal-title" id="replyToTicketModalLabel">Reply to Ticket {{selectedTicket.ticket}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Message</label>
+            <textarea class="form-control"> </textarea>
+  
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Reply</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,12 @@
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: gainsboro;
+    margin-bottom: 1rem;
+    align-items: center;
+    .title {
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
